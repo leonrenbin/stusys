@@ -1,0 +1,428 @@
+//公布信息
+.publish_info{
+    width: 100%;
+    padding-left: 20px;
+    .already_publish{
+        width: 100%;
+        display: flex;
+        padding-bottom: 30px;
+        .alread_news{
+            width: 50%;
+            h3{
+                line-height: 30px;
+                font-size: 20px;
+                font-weight: bold;
+            }
+            .news_item{
+                width: 100%;
+                margin-top: 20px;
+                max-height: 150px;
+                overflow-y: auto;
+                &::-webkit-scrollbar{  //改变滚动条宽高
+                    width:5px;
+                    height: 0px;
+                }
+                li{
+                    width: 100%;
+                    margin-bottom: 10px;
+                    position: relative;
+                    display: flex;
+                    transition-duration: .3s;
+                    padding: 3px 0;
+                    &:hover{
+                        background-color: #f9f9f9;
+                        .delete{
+                            opacity: 1;
+                        }
+                    }
+                    .count{
+                        margin-right: 10px;
+                        font-size: 0.7rem;
+                        color: #777;
+                    }
+                    .delete{
+                        display: block;
+                        opacity: 0;
+                        position: absolute;
+                        transition-duration: .3s;
+                        right: 10px;
+                        top: 1px;
+                        width: 18px;
+                        height: 18px;
+                        background-image: url('../img/delate.png');
+                        background-size: 100% 100%;
+                        cursor: pointer;
+                    }
+                    a{
+                        padding-right: 30px;
+                        font-size: 14px;
+                        text-decoration: none;
+                        color: #333;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        transition-duration: .2s;
+                        &:hover{
+                            color: #00a1d6;
+                        }
+                    }
+                }
+            }
+        }
+        .already_pub{
+            width: 50%;
+            h3{
+                line-height: 30px;
+                font-size: 20px;
+                font-weight: bold;
+            }
+            .pubLish_item{
+                width: 100%;
+                margin-top: 20px;
+                max-height: 150px;
+                overflow-y: auto;
+                display: flex;
+                flex-wrap: wrap;
+                &::-webkit-scrollbar{  //改变滚动条宽高
+                    width:5px;
+                    height: 0px;
+                }
+                li{
+                    width: 100%;
+                    margin-bottom: 10px;
+                    position: relative;
+                    transition-duration: .3s;
+                    padding: 3px 0px;
+                    &:hover{
+                        background-color: #f9f9f9;
+                        .delete{
+                            opacity: 1;
+                        }
+                    }
+                    .count{
+                        margin-right: 10px;
+                        font-size: 0.7rem;
+                        color: #777;
+                    }
+                    .delete{
+                        display: block;
+                        opacity: 0;
+                        position: absolute;
+                        transition-duration: .3s;
+                        right: 10px;
+                        top: 1px;
+                        width: 18px;
+                        height: 18px;
+                        background-image: url('../img/delate.png');
+                        background-size: 100% 100%;
+                        cursor: pointer;
+                    }
+                    a{
+                        font-size: 14px;
+                        text-decoration: none;
+                        color: #333;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        transition-duration: .2s;
+                        &:hover{
+                        color: #00a1d6;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .add_publish{
+        min-height: 460px;
+        width: 100%;
+        margin-bottom: 80px;
+        .publish_switch{
+            background-color: #abc;
+            width: 100%;
+            padding: 30px 0px;
+            margin-bottom: 2px;
+            text-align: center;
+            box-sizing: border-box;
+            button{
+                border: none;
+                background-color: #fff;
+                border-radius: 4px;
+                padding: 7px 15px;
+                font-size: 14px;
+                font-weight: bold;
+                margin: 0px 5px;
+                transition-duration: .5s;
+                cursor: pointer;
+                &:hover{
+                    background-color: #00a1d6;
+                    color: #fff;
+                }
+                &.active{
+                    background-color: #00a1d6;
+                    color: #fff;
+                }
+            }
+        }
+        .publish_wrap{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            .pubInfo_title{
+                width: 100%;
+                display: flex;
+                margin-top: 20px;
+                justify-content: space-between;
+                span{
+                    font-size: 16px;
+                    font-weight: bold;
+                    line-height: 40px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+                input{
+                    width: 94%;
+                    letter-spacing: 2px;
+                    box-sizing: border-box;
+                    line-height: 40px;
+                    border: none;
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                    font-size: 16px;
+                    color: #666;
+                    font-weight: bold;
+                    padding-left: 15px;
+                }
+            }
+            .ask{
+                width: 100%;
+                margin-top: 20px;
+                span{
+                    font-size: 16px;
+                    margin-right: 10px;
+                    cursor: pointer;
+                    padding: 3px 20px;
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                    font-size: 12px;
+                    transition-duration: .2s;
+                    &.active{
+                        border-color: #00a1d6;
+                        font-weight: bold;
+                    }
+                    &:hover{
+                        border-color: #00a1d6;
+                    }
+                }
+            }
+            .pubInfo_img{
+                width: 100%;
+                margin-top: 20px;
+                height: 100%;
+                .img_wrap{
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    input{
+                        display: none;
+                    }
+                    .imgFile{
+                        margin-right: 20px;
+                        width: 110px;
+                        height: 100px;
+                        border: 1px solid #ddd;
+                        box-sizing: border-box;
+                        border-radius: 5px;
+                        transition-duration: .5s;
+                        text-align: center;
+                        display: flex;
+                        flex-wrap: wrap;
+                        cursor: pointer;
+                        i{
+                            display: block;
+                            width: 100%;
+                            font-size: 60px;
+                            color: #999;
+                            transition-duration: .5s;
+                        }
+                        span{
+                            display: block;
+                            width: 100%;
+                            font-size: 14px;
+                            transition-duration: .5s;
+                        }
+                        &:hover{
+                            border-color: #00a1d6;
+                            i{
+                                color: #00a1d6;
+                            }
+                            span{
+                                color: #00a1d6;
+                            }
+                        }
+                    }
+                    .img_box{
+                        width: 100%;
+                        height: 100px;
+                        display: flex;
+                        .img_list{
+                            width: 100px;
+                            height: 100%;
+                            margin-right: 10px;
+                            border: 1px solid #ddd;
+                            box-sizing: border-box;
+                            border-radius: 5px;
+                            text-align: center;
+                            cursor: pointer;
+                            position: relative;
+                            img{
+                                width: 100%;
+                                height: 100%;
+                            }
+                            .deleteImg{
+                                position: absolute;
+                                right: 0;
+                                top: 0;
+                                width: 50%;
+                                height: 100px;
+                                border-radius: 5px;
+                                transition-duration: .3s;
+                                opacity: 0;
+                                &:hover{
+                                    background-color: rgba(0, 0, 0, 0.1);
+                                    opacity: 1;
+                                }
+                                i{
+                                    width: 24px;
+                                    height: 24px;
+                                    position: absolute;
+                                    left: 50%;
+                                    top: 50%;
+                                    transform: translate(-50%, -50%);
+                                    background-image: url('../../assets//img/delate.png');
+                                    background-size: 100% 100%;
+                                    background-repeat: no-repeat;
+                                    transition-duration: .5s;
+                                    border-radius: 4px;
+                                    &:hover{
+                                        background-color: rgba(0, 0, 0, 0.1);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .img_desc{
+                    width: 100%;
+                    margin-top: 20px;
+                    span{
+                        display: block;
+                        width: 100%;
+                        font-size: 16px;
+                        font-weight: bold;
+                        margin-bottom: 10px;
+                    }
+                    input{
+                        width: 100%;
+                        box-sizing: border-box;
+                        line-height: 24px;
+                        border: none;
+                        border: 1px solid #ccc;
+                        border-radius: 4px;
+                        font-size: 12px;
+                        padding-left: 15px;
+                    }
+                }
+                .img_source{
+                    width: 100%;
+                    margin-top: 20px;
+                    span{
+                        display: block;
+                        width: 100%;
+                        font-size: 16px;
+                        font-weight: bold;
+                        margin-bottom: 10px;
+                    }
+                    input{
+                        width: 100%;
+                        box-sizing: border-box;
+                        line-height: 24px;
+                        border: none;
+                        border: 1px solid #ccc;
+                        border-radius: 4px;
+                        font-size: 12px;
+                        padding-left: 15px;
+                    }
+                }
+            }
+            .pubInfo_time{
+                margin-top: 20px;
+                width: 100%;
+                span{
+                    font-size: 16px;
+                    font-weight: bold;
+                    margin-right: 10px;
+                    width: 100%;
+                    display: block;
+                    margin-bottom: 10px;
+                }
+                select{
+                    appearance: none;
+                    -moz-appearance: none;
+                    -webkit-appearance: none;
+                    padding-right: 1.1rem;
+                    width: 9rem;
+                    margin-right: 10px;
+                    height: 1.6rem;
+                    line-height: 1.6rem;
+                    padding-left: 10px;
+                    background-color: #fff;
+                    border: 1px solid #DDD;
+                    border-radius: 1rem;
+                    font-size: 0.64rem;
+                    cursor: pointer;
+                }
+            }
+            .pubInfo_para{
+                margin-top: 20px;
+                width: 100%;
+                span{
+                    font-size: 16px;
+                    font-weight: bold;
+                    margin-right: 10px;
+                    display: block;
+                    width: 100%;
+                    margin-bottom: 10px;
+                }
+                textarea{
+                    width: 100%;
+                    resize: none;
+                    min-height: 150px;
+                    border-radius: 5px;
+                    line-height: 20px;
+                    padding-left: 10px;
+                }
+            }
+            .submit{
+                width: 100%;
+                margin-top: 30px;
+                text-align: center;
+                button{
+                    margin: 0 10px;
+                    padding: 4px 20px;
+                    font-size: 16px;
+                    border: none;
+                    border: 1px solid #ccc;
+                    background-color: #fff;
+                    border-radius: 4px;
+                    transition-duration: .2s;
+                    cursor: pointer;
+                    &:hover{
+                        border-color: #00a1d6;
+                    }
+                }
+            }
+        }
+    }
+}

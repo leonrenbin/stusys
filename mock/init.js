@@ -1,0 +1,8 @@
+require('./mockAchievement')
+require('./mockClass')
+require('./mockCollege')
+require('./mockCurriculum')
+require('./mockMajor')
+require('./mockStudent')
+require('./mockTeacher')
+require('./mockSchool')
